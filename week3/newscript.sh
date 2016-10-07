@@ -1,21 +1,19 @@
 #!/bin/bash
 
+#Positional Parameters are
+#$1 $2 $ 3 etc
+
 echo "This is a script to create directories"
 
-#delete the directory first
-rmdir week2
-#throws an exception if week2 alread exists
+POSPAR1="$1"
+POSPAR1="$2"
+POSPAR1="$3"
 
+echo "The number of positional parameters is $#."
+echo "$1 is the 1st positional parameter,"
+echo "$2 is the 1st positional parameter,"
+echo "$3 is the 1st positional parameter."
 
-mkdir week2
+echo "is this Correct???"
 
-cd week2 
-
-mkdir test1
-
-mkdir test2
-mkdir test3
-
-#Alt
-
-mkdir week2/subdir1 week2/subdir2 week2/subdir3
+mkdir backup_date date +%D-%R:%S
